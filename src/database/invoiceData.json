@@ -1,0 +1,23 @@
+[
+    {
+        "id": "RT3080",
+        "due_date": "2021-08-19",
+        "assignee": "Jensen Huang",
+        "amount": 1800.90,
+        "status": "Paid"
+    },
+    {
+        "id": "RT3090",
+        "due_date": "2021-09-25",
+        "assignee": "John Doe",
+        "amount": 2200.50,
+        "status": "Pending"
+    },
+    {
+        "id": "RT3110",
+        "due_date": "2021-11-15",
+        "assignee": "Emily Johnson",
+        "amount": 2500.25,
+        "status": "Overdue"
+    }
+]
