@@ -25,7 +25,9 @@
                     {invoice.status}
                 </p>
             </div>
-            <button class="w-3 h-3 text-violet-700"><FaAngleRight /></button>
+            <a class="w-3 h-3 text-violet-700" href={`/invoice/${invoice.id}`}
+                ><FaAngleRight /></a
+            >
         </div>
     {/each}
 </div>
