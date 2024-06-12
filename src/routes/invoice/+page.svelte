@@ -1,10 +1,8 @@
 <script>
     //@ts-ignore
     import FaAngleDown from "svelte-icons/fa/FaAngleDown.svelte";
-    import { createEventDispatcher } from "svelte";
     import Table from "../../component/table/+table.svelte";
-    const dispatch = createEventDispatcher();
-    const statuses = ["All", "Paid", "Pending", "Overdue"];
+    import { newStatus, statuses } from "../../store/filter/filterStore";
     let isOpen = false;
 
     function toggleDropdown() {
@@ -14,10 +12,10 @@
     /**
      * @param {string} status
      */
-    function selectStatus(status) {
-        dispatch("filter", { status });
+    const selectStatus = async (status) => {
+        newStatus.set(status);
         toggleDropdown();
-    }
+    };
 </script>
 
 <div class="xs:m-2 sm:m-8 md:m-28">

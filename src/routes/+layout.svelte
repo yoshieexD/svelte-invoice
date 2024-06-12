@@ -4,14 +4,14 @@
 	import Navbar from "../component/navbar/+navbar.svelte";
 </script>
 
-<div class="w-full h-screen flex sm:flex-row xs:flex-col">
+<div class="w-full h-screen flex sm:flex-row xxs:flex-col">
 	<Sidebar
-		className="w-[10%] bg-slate-900 pb-2 xs:hidden sm:flex  flex flex-col justify-between items-center"
+		className="w-[10%] bg-slate-900 pb-2 xxs:hidden sm:flex  flex flex-col justify-between items-center"
 	/>
 	<Navbar
-		className="xs:h-[10%] xs:flex items-center justify-between sm:hidden bg-slate-900"
+		className="xxs:h-[10%] xs:flex items-center justify-between sm:hidden bg-slate-900"
 	/>
-	<div class="xs:w-[100%] sm:w-[90%] xs:h-[90%] sm:h-screen bg-slate-950">
+	<div class="xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen bg-slate-950">
 		<slot />
 	</div>
 </div>

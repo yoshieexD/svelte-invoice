@@ -31,9 +31,11 @@
                     <button class="bg-red-500/95 w-20 rounded-full py-2"
                         >Delete</button
                     >
-                    <button class="bg-violet-600 p-2 rounded-full"
-                        >Mark as Paid</button
-                    >
+                    {#if data.status.toLowerCase() !== "paid"}
+                        <button class="bg-violet-600 p-2 rounded-full"
+                            >Mark as Paid</button
+                        >
+                    {/if}
                 </div>
             {/if}
         </div>

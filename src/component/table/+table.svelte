@@ -1,11 +1,33 @@
-<script>
+<script lang="ts">
     //@ts-ignore
     import FaAngleRight from "svelte-icons/fa/FaAngleRight.svelte";
     import InvoiceData from "../../database/invoiceData.json";
+    import { newStatus } from "../../store/filter/filterStore";
+
+    type Invoice = {
+        id: string;
+        due_date: string;
+        amount: number;
+        status: string;
+        assignee: string;
+    };
+
+    let invoiceDatas: Invoice[] = [];
+
+    newStatus.subscribe((value) => {
+        if (value.toLowerCase() === "all") {
+            invoiceDatas = InvoiceData;
+        } else {
+            invoiceDatas = InvoiceData.filter(
+                (invoice) =>
+                    invoice.status.toLowerCase() === value.toLowerCase(),
+            );
+        }
+    });
 </script>
 
 <div class="space-y-2">
-    {#each InvoiceData as invoice}
+    {#each invoiceDatas as invoice}
         <div
             class="flex justify-around items-center rounded-md text-white h-20 bg-slate-900 px-2"
         >
