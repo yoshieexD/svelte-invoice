@@ -26,7 +26,7 @@
             <h1 class="text-3xl font-semibold text-white">Invoices</h1>
             <h1 class="text-sm text-gray-400">There are 7 total invoices</h1>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-8">
             <div class="relative">
                 <button
                     type="button"
