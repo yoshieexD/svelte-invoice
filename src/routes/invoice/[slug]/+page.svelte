@@ -20,7 +20,7 @@
 {:else}
     <div class="xs:m-2 sm:m-8 md:m-28">
         <div
-            class="bg-slate-900 rounded-md flex justify-between px-4 py-3 items-center"
+            class="bg-gray-700/20 rounded-md flex justify-between px-4 py-3 items-center border border-gray-200/10"
         >
             {#if data}
                 <div class="text-xl font-bold text-white">#{data.id}</div>
@@ -28,7 +28,7 @@
                     <button class="bg-slate-600/20 w-16 py-2 rounded-full"
                         >Edit</button
                     >
-                    <button class="bg-red-500/95 w-20 rounded-full py-2"
+                    <button class="bg-red-600/60 w-20 rounded-full py-2"
                         >Delete</button
                     >
                     {#if data.status.toLowerCase() !== "paid"}
@@ -39,5 +39,8 @@
                 </div>
             {/if}
         </div>
+        <div
+            class="bg-gray-700/20 rounded-md flex justify-between px-4 py-3 items-center mt-4 border border-gray-200/10"
+        ></div>
     </div>
 {/if}

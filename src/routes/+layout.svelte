@@ -6,12 +6,23 @@
 
 <div class="w-full h-screen flex sm:flex-row xxs:flex-col">
 	<Sidebar
-		className="w-[10%] bg-slate-900 pb-2 xxs:hidden sm:flex  flex flex-col justify-between items-center"
+		className="w-[10%] bg-slate-900 pb-4 xxs:hidden sm:flex  flex flex-col justify-between items-center"
 	/>
 	<Navbar
-		className="xxs:h-[10%] xs:flex items-center justify-between sm:hidden bg-slate-900"
+		className="xxs:h-[10%] xxs:flex pr-4 items-center justify-between sm:hidden bg-slate-900"
 	/>
-	<div class="xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen bg-slate-950">
-		<slot />
+	<div
+		class="xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen bg-slate-900 relative overflow-hidden"
+	>
+		<div
+			class="bg-violet-700/10 h-80 w-80 rotate-45 rounded-full absolute z-0 left-[10%] top-[10%] blur-3xl"
+		/>
+		<div
+			class="bg-blue-700/10 h-96 w-96 rotate-12 rounded-full absolute z-0 left-[50%] top-[25%] blur-2xl"
+		/>
+
+		<div class="relative z-10">
+			<slot />
+		</div>
 	</div>
 </div>

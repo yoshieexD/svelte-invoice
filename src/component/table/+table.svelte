@@ -1,6 +1,8 @@
 <script lang="ts">
     //@ts-ignore
     import FaAngleRight from "svelte-icons/fa/FaAngleRight.svelte";
+    //@ts-ignore
+    import IoIosArrowDown from "svelte-icons/io/IoIosArrowDown.svelte";
     import InvoiceData from "../../database/invoiceData.json";
     import { newStatus } from "../../store/filter/filterStore";
 
@@ -29,7 +31,7 @@
 <div class="space-y-2">
     {#each invoiceDatas as invoice}
         <div
-            class="flex justify-around items-center rounded-md text-white h-20 bg-slate-900 px-2"
+            class="flex justify-around items-center rounded-md text-white h-20 bg-gray-700/20 px-2 border border-gray-200/10"
         >
             <div class="font-semibold w-[16%]">#{invoice.id}</div>
             <div class="font-light w-[16%]">Due {invoice.due_date}</div>
@@ -57,4 +59,11 @@
             >
         </div>
     {/each}
+    <div
+        class="bg-white h-[50px] w-[50px] rounded-full flex justify-center items-center hover:animate-bounce bg-gray-700/20 border border-gray-200/10 absolute left-[45%] top-[95%] cursor-pointer"
+    >
+        <div class="h-6 w-6 text-violet-600">
+            <IoIosArrowDown />
+        </div>
+    </div>
 </div>

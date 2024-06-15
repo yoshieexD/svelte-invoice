@@ -56,7 +56,7 @@
             </div>
             <div>
                 <button
-                    class="bg-violet-600 py-1 px-2 rounded-full flex space-x-2 flex items-center"
+                    class="bg-violet-600 py-1 px-2 rounded-full flex space-x-2 flex items-center shadow-lg hover:shadow-indigo-600/50"
                 >
                     <div
                         class="rounded-full w-8 h-8 bg-white text-violet-600 flex items-center justify-center"
