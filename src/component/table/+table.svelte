@@ -60,7 +60,7 @@
         </div>
     {/each}
     <div
-        class=" h-[50px] w-[50px] rounded-full flex justify-center items-center hover:animate-bounce bg-gray-700/20 border border-gray-200/10 absolute left-[45%] top-[95%] cursor-pointer"
+        class=" h-[50px] w-[50px] rounded-full flex justify-center items-center hover:animate-bounce bg-gray-700/20 border border-gray-200/10 absolute left-[45%] top-[85%] cursor-pointer"
     >
         <div class="h-6 w-6 text-violet-600">
             <IoIosArrowDown />

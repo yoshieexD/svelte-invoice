@@ -1,35 +1,31 @@
-<div class="flex h-screen">
-    <!-- Sidebar -->
-    <div class="bg-gray-800 text-white w-64 flex-shrink-0">
-        <!-- Sidebar content -->
-        <div class="p-4">
-            <h2 class="text-lg font-semibold">Sidebar</h2>
-            <!-- Your sidebar links/menu items -->
-            <ul class="mt-4">
-                <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-4 text-white hover:bg-gray-700"
-                        >Link 1</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-4 text-white hover:bg-gray-700"
-                        >Link 2</a
-                    >
-                </li>
-                <!-- Add more links as needed -->
-            </ul>
-        </div>
-    </div>
-    <!-- Main content area -->
-    <div class="flex-1 bg-gray-200">
-        <!-- Content goes here -->
-        <div class="p-4">
-            <h1 class="text-xl font-semibold">Main Content</h1>
-            <p>This is the main content area.</p>
-        </div>
-    </div>
+<!-- src/component/drawer/+drawer.svelte -->
+<script>
+    import { isOpenDrawer } from "../../store/drawer/drawerStore";
+    let isOpen = false;
+    export let className = "";
+    isOpenDrawer.subscribe((value) => {
+        isOpen = value;
+    });
+
+    console.log(isOpen);
+</script>
+
+<div
+    class={`drawer {isOpen
+        ? 'open'
+        : ''} fixed top-0 left-[50%] w-[40%] h-full text-white bg-slate-900 rounded-r-2xl border border-l-0 border-gray-100/10 py-12 px-4 ${className}`}
+>
+    <slot></slot>
 </div>
+
+<style>
+    .drawer {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 2;
+    }
+
+    .drawer.open {
+        transform: translateX(0);
+    }
+</style>

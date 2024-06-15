@@ -2,11 +2,12 @@
 	import "../app.css";
 	import Sidebar from "../component/sidebar/+sidebar.svelte";
 	import Navbar from "../component/navbar/+navbar.svelte";
+	import { Toaster } from "svelte-french-toast";
 </script>
 
 <div class="w-full h-screen flex sm:flex-row xxs:flex-col">
 	<Sidebar
-		className="w-[10%] bg-slate-900 pb-4 xxs:hidden sm:flex  flex flex-col justify-between items-center"
+		className="w-[10%] bg-slate-900 pb-4 xxs:hidden sm:flex  flex flex-col justify-between items-center border border-y-0 border-l-0 border-gray-100/10"
 	/>
 	<Navbar
 		className="xxs:h-[10%] xxs:flex pr-4 items-center justify-between sm:hidden bg-slate-900"
@@ -22,6 +23,7 @@
 		/>
 
 		<div class="relative z-10">
+			<Toaster />
 			<slot />
 		</div>
 	</div>
