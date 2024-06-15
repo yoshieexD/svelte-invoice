@@ -18,7 +18,7 @@
     };
 </script>
 
-<div class="xs:m-2 sm:m-8 md:m-28">
+<div class="xxs:m-2 sm:m-8 md:m-28">
     <div class="flex items-center justify-between">
         <div class="space-y-1">
             <h1 class="text-3xl font-semibold text-white">Invoices</h1>

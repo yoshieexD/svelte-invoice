@@ -4,20 +4,53 @@
         "due_date": "2021-08-19",
         "assignee": "Jensen Huang",
         "amount": 1800.90,
-        "status": "Paid"
+        "status": "Paid",
+        "items": [
+            {
+                "name": "Laptop",
+                "quantity": 2,
+                "price": 900.45
+            }
+        ],
+        "company": "Tech Innovators Inc.",
+        "address": "123 Silicon Valley Blvd, San Jose, CA 95123",
+        "contact_number": "408-555-1234",
+        "email": "j.huang@techinnovators.com"
     },
     {
         "id": "RT3090",
         "due_date": "2021-09-25",
         "assignee": "John Doe",
         "amount": 2200.50,
-        "status": "Pending"
+        "status": "Pending",
+        "items": [
+            {
+                "name": "Monitor",
+                "quantity": 5,
+                "price": 440.10
+            }
+        ],
+        "company": "Visionary Displays Ltd.",
+        "address": "456 Display Ave, Fremont, CA 94536",
+        "contact_number": "510-555-5678",
+        "email": "j.doe@visionarydisplays.com"
     },
     {
         "id": "RT3110",
         "due_date": "2021-11-15",
         "assignee": "Emily Johnson",
         "amount": 2500.25,
-        "status": "Draft"
+        "status": "Draft",
+        "items": [
+            {
+                "name": "Tablet",
+                "quantity": 10,
+                "price": 250.02
+            }
+        ],
+        "company": "Mobile Solutions Co.",
+        "address": "789 Mobile Way, Palo Alto, CA 94301",
+        "contact_number": "650-555-6789",
+        "email": "e.johnson@mobilesolutions.com"
     }
 ]
