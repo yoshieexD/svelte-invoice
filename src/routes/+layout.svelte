@@ -45,12 +45,12 @@
 		{/if}
 		{#if settings && !mobile}
 			<Popover
-				className="absolute text-white bg-gray-700/20 border-gray-200/10 top-[80%] mt-2 p-4 rounded-r-xl rounded-tl-lg  shadow-lg left-[1%] z-30 w-[10%] h-[15%] space-y-2"
+				className="absolute text-white bg-gray-700/20 border-gray-200/10 top-[80%] mt-2 p-4 rounded-r-xl rounded-tl-lg  shadow-lg left-[1%] z-30 sm:w-[20%] md:w-[10%] h-[15%] space-y-2 xxs:hidden sm:block"
 			/>
 		{/if}
 		{#if settings && mobile}
 			<Popover
-				className="absolute text-white bg-gray-700/40 border-gray-200/10 top-[0] mt-2 p-4 rounded-l-xl rounded-br-lg  shadow-lg right-[9%] z-30 w-[40%] h-[19%] space-y-2"
+				className="absolute text-white bg-gray-700/40 border-gray-200/10 top-[0] mt-2 p-4 rounded-l-xl rounded-br-lg  shadow-lg right-[9%] z-30 w-[40%] h-[19%] space-y-2 xxs:block sm:hidden"
 			/>
 		{/if}
 		<div class="relative z-10">

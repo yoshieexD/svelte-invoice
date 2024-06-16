@@ -58,16 +58,16 @@
                     <div class="text-xl font-bold text-white">#{data.id}</div>
                     <div class="space-x-2 text-white flex items-center">
                         <button
-                            class="bg-slate-600/20 w-16 py-2 rounded-full"
+                            class="bg-slate-600/20 w-16 py-2 rounded-full hover:bg-slate-800/20"
                             on:click={toggleDrawer}>Edit</button
                         >
                         <button
-                            class="bg-red-600/60 w-20 rounded-full py-2"
+                            class="bg-red-600/60 hover:bg-red-800/60 w-20 rounded-full py-2"
                             on:click={handleDelete}>Delete</button
                         >
                         {#if data.status.toLowerCase() !== "paid"}
                             <button
-                                class="bg-violet-600 p-2 rounded-full"
+                                class="bg-violet-600 p-2 rounded-full hover:bg-violet-800"
                                 on:click={handleMarkPaid}>Mark as Paid</button
                             >
                         {/if}
