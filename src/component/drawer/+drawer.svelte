@@ -13,7 +13,7 @@
 <div
     class={`drawer {isOpen
         ? 'open'
-        : ''} fixed top-0 left-[50%] w-[40%] h-full text-white bg-slate-900 rounded-r-2xl border border-l-0 border-gray-100/10 py-12 px-4 ${className}`}
+        : ''} fixed top-0 left-[50%] w-[40%] h-full text-white bg-slate-900 rounded-r-2xl border border-l-0 border-gray-100/10 py-6 px-4 ${className}`}
 >
     <slot></slot>
 </div>

@@ -14,6 +14,9 @@
         ],
         "company": "Tech Innovators Inc.",
         "address": "123 Silicon Valley Blvd, San Jose, CA 95123",
+        "street": "123 Silicon Valley Blvd",
+        "city": "San Jose",
+        "country": "USA",
         "contact_number": "408-555-1234",
         "email": "j.huang@techinnovators.com"
     },
@@ -32,6 +35,9 @@
         ],
         "company": "Visionary Displays Ltd.",
         "address": "456 Display Ave, Fremont, CA 94536",
+        "street": "456 Display Ave",
+        "city": "Fremont",
+        "country": "USA",
         "contact_number": "510-555-5678",
         "email": "j.doe@visionarydisplays.com"
     },
@@ -50,6 +56,9 @@
         ],
         "company": "Mobile Solutions Co.",
         "address": "789 Mobile Way, Palo Alto, CA 94301",
+        "street": "789 Mobile Way",
+        "city": "Palo Alto",
+        "country": "USA",
         "contact_number": "650-555-6789",
         "email": "e.johnson@mobilesolutions.com"
     }

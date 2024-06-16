@@ -7,6 +7,7 @@
 
     $: slug = $page.params.slug;
     $: data = InvoiceData.find((invoice) => invoice.id === slug);
+
     const handleSubmit = async () => {
         await isOpenDrawer.set(false);
         toast("Successfully Edit!", {
@@ -27,9 +28,24 @@
     />
     <div class="text-xs text-gray-600 font-semibold">Address</div>
     <div class="flex space-x-4">
-        <Input type="text" name="street" placeholder="123 Main St" />
-        <Input type="text" name="city" placeholder="Springfield" />
-        <Input type="text" name="country" placeholder="USA" />
+        <Input
+            type="text"
+            name="street"
+            placeholder="123 Main St"
+            value={data?.street}
+        />
+        <Input
+            type="text"
+            name="city"
+            placeholder="Springfield"
+            value={data?.city}
+        />
+        <Input
+            type="text"
+            name="country"
+            placeholder="USA"
+            value={data?.country}
+        />
     </div>
     <Input
         type="text"
@@ -60,12 +76,37 @@
         title="Status"
         value={data?.status}
     />
+    <div class="text-xs text-gray-600 font-semibold">Items</div>
+
+    {#each data?.items ?? [] as item, index}
+        <div class="flex space-x-4">
+            <Input
+                type="text"
+                name={`item_name_${index}`}
+                placeholder="Item name"
+                value={item.name}
+            />
+            <Input
+                type="number"
+                name={`item_quantity_${index}`}
+                placeholder="Quantity"
+                value={item.quantity.toString()}
+            />
+            <Input
+                type="text"
+                name={`item_price_${index}`}
+                placeholder="Price"
+                value={item.price.toString()}
+            />
+        </div>
+    {/each}
 
     <div class="flex justify-end py-4">
         <button
             on:click={handleSubmit}
             class="bg-violet-600 hover:bg-violet-800 w-[100px] rounded-full py-1"
-            >Submit</button
         >
+            Submit
+        </button>
     </div>
 </div>

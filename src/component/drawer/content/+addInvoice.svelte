@@ -50,7 +50,12 @@
         placeholder="Paid / Pending / Draft"
         title="Status"
     />
-
+    <div class="text-xs text-gray-600 font-semibold">Items</div>
+    <div class="flex space-x-4">
+        <Input type="text" name={`item`} placeholder="Item name" />
+        <Input type="number" placeholder="Quantity" />
+        <Input type="text" placeholder="Price" />
+    </div>
     <div class="flex justify-end py-4">
         <button
             on:click={handleSubmit}
