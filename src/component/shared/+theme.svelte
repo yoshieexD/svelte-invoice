@@ -3,17 +3,16 @@
     import IoIosSunny from "svelte-icons/io/IoIosSunny.svelte";
     //@ts-ignore
     import IoIosMoon from "svelte-icons/io/IoIosMoon.svelte";
-    import { newTheme } from "../../store/theme/themeStore";
+    import { darkMode } from "../../store/theme/themeStore";
 
     export let isDarkMode = true;
     function handleDarkmode() {
         isDarkMode = !isDarkMode;
         if (!isDarkMode) {
-            newTheme.set("Light");
+            darkMode.set(false);
         } else {
-            newTheme.set("Dark");
+            darkMode.set(true);
         }
-        console.log(newTheme);
     }
 </script>
 

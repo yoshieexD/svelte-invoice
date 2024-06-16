@@ -6,6 +6,16 @@
     import AddInvoice from "../../component/drawer/content/+addInvoice.svelte";
     import { isOpenDrawer } from "../../store/drawer/drawerStore";
     import Drawer from "../../component/drawer/+drawer.svelte";
+    import { darkMode } from "../../store/theme/themeStore";
+
+    /**
+     * @type {boolean}
+     */
+    let localDark;
+    darkMode.subscribe((Value) => {
+        localDark = Value;
+    });
+
     let isDrawerOpen = false;
     let isDropdownOpen = false;
     function toggleDrawer() {
@@ -37,7 +47,11 @@
     <div class="xxs:m-2 sm:m-8 md:m-28 w-full h-full">
         <div class="flex items-center justify-between">
             <div class="space-y-1">
-                <h1 class="text-3xl font-semibold text-white">Invoices</h1>
+                <h1
+                    class={`text-3xl font-semibold ${localDark ? "text-white" : "text-slate-900"}`}
+                >
+                    Invoices
+                </h1>
                 <h1 class="text-sm text-gray-400">
                     There are 7 total invoices
                 </h1>
@@ -49,7 +63,9 @@
                         class="space-x-2 flex items-center cursor-pointer"
                         on:click={toggleDropdown}
                     >
-                        <p class="text-white font-semibold text-sm">
+                        <p
+                            class={` ${localDark ? "text-white" : "text-slate-900"} font-semibold text-sm`}
+                        >
                             Filter by status
                         </p>
                         <div class="w-4 h-4 text-violet-700">
@@ -84,7 +100,7 @@
                         >
                             <p class="text-lg font-semibold">+</p>
                         </div>
-                        <p class="text-white font-semibold">New Invoice</p>
+                        <p class={` text-white font-semibold`}>New Invoice</p>
                     </button>
                 </div>
             </div>

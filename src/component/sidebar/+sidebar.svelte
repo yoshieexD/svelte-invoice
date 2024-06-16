@@ -11,7 +11,7 @@
         <DiHeroku />
     </div>
     <div class="flex flex-col items-center space-y-4 w-full">
-        <Theme />
+        <!-- <Theme /> -->
         <div class="bg-slate-800/40 rounded-full h-[1px] w-[100%]" />
         <img
             src="https://picsum.photos/40/40"
