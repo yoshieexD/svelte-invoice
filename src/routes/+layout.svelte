@@ -41,10 +41,10 @@
 		class={`xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen ${localDark ? "bg-slate-900" : "bg-zinc-300"} bg-slate-900 relative overflow-hidden`}
 	>
 		<div class="flex justify-end xxs:px-2 xxs:mt-4 sm:px-16 sm:mt-16">
-			<div class="flex space-x-4">
+			<div class="flex sm:space-x-4 lg:space-x-6">
 				{#if isFact}
 					<div
-						class="text-white bg-gray-700/20 border border-gray-200/10 rounded-xl flex items-center py-2 px-4 absolute left-[70%]"
+						class="text-white bg-gray-700/20 border border-gray-200/10 rounded-xl flex items-center py-2 px-4 text-xs"
 					>
 						A Front end mentor challenge with extra twist.
 					</div>
