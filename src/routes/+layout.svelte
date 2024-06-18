@@ -40,7 +40,7 @@
 	<div
 		class={`xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen ${localDark ? "bg-slate-900" : "bg-zinc-300"} bg-slate-900 relative overflow-hidden`}
 	>
-		<div class="flex justify-end xxs:px-2 xxs:mt-4 sm:px-16 sm:mt-16">
+		<div class="flex justify-end xxs:px-2 xxs:mt-4 sm:px-16 sm:mt-4">
 			<div class="flex sm:space-x-4 lg:space-x-6">
 				{#if isFact}
 					<div
@@ -82,7 +82,7 @@
 				className="absolute text-white bg-gray-700/40 border-gray-200/10 top-[0] mt-2 p-4 rounded-l-xl rounded-br-lg  shadow-lg right-[9%] z-30 w-[40%] h-[19%] space-y-2 xxs:block sm:hidden"
 			/>
 		{/if}
-		<div class="relative z-10">
+		<div class="relative z-10 xxs:mt-[0px] md:mt-[-40px]">
 			<Toaster />
 			<slot />
 		</div>
