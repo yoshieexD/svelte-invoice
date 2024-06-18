@@ -9,10 +9,15 @@
 	let settings = false;
 	let mobile = false;
 
+	let isFact = false;
+
 	isSettings.subscribe((value) => {
 		settings = value;
 	});
 
+	function Fact() {
+		isFact = !isFact;
+	}
 	isMobile.subscribe((value) => {
 		mobile = value;
 	});
@@ -35,6 +40,30 @@
 	<div
 		class={`xxs:w-[100%] sm:w-[90%] xxs:h-[90%] sm:h-screen ${localDark ? "bg-slate-900" : "bg-zinc-300"} bg-slate-900 relative overflow-hidden`}
 	>
+		<div class="flex justify-end xxs:px-2 xxs:mt-4 sm:px-16 sm:mt-16">
+			<div class="flex space-x-4">
+				{#if isFact}
+					<div
+						class="text-white bg-gray-700/20 border border-gray-200/10 rounded-xl flex items-center py-2 px-4 absolute left-[70%]"
+					>
+						A Front end mentor challenge with extra twist.
+					</div>
+				{/if}
+				<button
+					type="button"
+					class="cursor-pointer text-3xl"
+					on:mouseenter={Fact}
+					on:mouseleave={Fact}
+				>
+					{#if isFact}
+						😮
+					{:else}
+						🤔
+					{/if}
+				</button>
+			</div>
+		</div>
+
 		{#if localDark}
 			<div
 				class="bg-violet-700/10 h-80 w-80 rotate-45 rounded-full absolute z-0 left-[10%] top-[10%] blur-3xl"
